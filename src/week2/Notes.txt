@@ -1,0 +1,57 @@
+	1. Jewels and Nums
+		a. Turn the string into a string array. Then loop through the elements, and see if the J contains any of the elements. If it does, then will increment the count.
+		b. Runtime: 7 ms, faster than 9.23% of Java online submissions for Jewels and Stones.
+		c. Memory Usage: 36.3 MB, less than 78.83% of Java online submissions forJewels and Stones.
+	2. Unique Morse Code: International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes as follows "a" maps to ".-","b" maps to "-…", "c" maps to "-.-.", and so on.
+		a. First put the morse codes in a HashMap.
+		b. Then just get the key of the characters and then concatenate them.
+		c. Put the concatenated codes in a map. If it does not exist in the map, then increment a transformation count.
+		d. Runtime: 11 ms, faster than 5.86% of Java online submissions for Unique Morse Code Words.
+		e. Memory Usage: 36.1 MB, less than 98.33% of Java online submissions forUnique Morse Code Words.
+	3. Write an algorithm to determine if a number is "happy". A happy number is defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until number is 1. or loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.
+		a. Convert the numbers into integer array.
+		b. Loop through each integer array and then take the sum of the squares. Once the sum is taken, add it into a set.
+		c. Then set the new sum to n. Report b, until either a loop is found where a number already exists in the set, or n becomes 1.
+		d. Runtime: 51 ms, faster than 5.08% of Java online submissions for Happy Number.
+		e. Memory Usage: 36.1 MB, less than 5.08% of Java online submissions forHappy Number.
+	4. We are given two sentences A and B (A sentence is a string of space separated words. Each word consists only of lowercase letters. A word is uncommon if it appears exactly once in one of the sentences, and does not appear in the other sentence.
+		a. First, loop through each sentence.
+		b. Create a hashmap consisting of the word and the count. After both sentences have been analyzed, loop through the HashMap. If the count is 1 then put the key into a String array.
+		c. Then loop through the hashmap and concatenate the words that are not repeated.
+		d. Return the string array of the words.
+		e. Runtime: 3 ms, faster than 69.98% of Java online submissions forUncommon Words from Two Sentences.
+		f. Memory Usage: 36.4 MB, less than 95.52% of Java online submissions for Uncommon Words from Two Sentences.
+	5. Given an integer array with even length, where different numbers in this array represent different kinds of candies. Each number means one candy of the corresponding kind. You need to distribute these candies equally in number to brother and sister. Return the maximum kind of candies the sister could gain.
+		a. First, loop through the array and put the numbers into a hashset. After do a comparison: if hashset size is greater than the array.length/2, then output the array.length/2. Otherwise, output hashset.size to find max the sister could gain.
+		b. Runtime: 51 ms, faster than 20.68% of Java online submissions forDistribute Candies.
+		c. Memory Usage: 42.2 MB, less than 87.10% of Java online submissions for Distribute Candies.
+	6. Groups of Special-Equivalent Strings: You are given an array A of strings. Two strings S and T are special-equivalent if after any number of moves, S == T.
+	7. Valid Sudoku - Determine if a 9x9 Sudoku board is valid. Only the filled ells need to be validated according to the follow rules.
+		a. First loop through all the rows. Then, loop through all the columns to see if there are any duplicate valuves from 1-9. Then, do each square in the sudoku.
+		b. Runtime: 5 ms, faster than 22.84% of Java online submissions for Valid Sudoku.
+		c. Memory Usage: 42.5 MB, less than 94.44% of Java online submissions for Valid Sudoku.
+	8. Isomorphic Strings - Given two strings s and t, determine if they are isomorphic.
+		a. Create two hashmaps. Loop through both sets and add the indexes of the characters of the words in each different hashmap.
+		b. Loop through one of the hasmaps and see if the values are contained in the other. If yes, return true, otherwise return false.
+		c. Runtime: 22 ms, faster than 8.42% of Java online submissions forIsomorphic Strings.
+		d. Memory Usage: 38.5 MB, less than 49.64% of Java online submissions for Isomorphic Strings.
+	9. Word Pattern - Given a pattern and string, find if string follows the same pattern.
+		a. Do the samething with isomorphic string, except now we need to have a hashmap of strings and also convert the string to an array and then loop through. But hashmap index comparison is the same.
+		b. Runtime: 2 ms, faster than 18.82% of Java online submissions for Word Pattern.
+		c. Memory Usage: 34.3 MB, less than 99.61% of Java online submissions for Word Pattern.
+	10. Design HashMap - Design a HashMap without using any built-in hash table libraries.
+		a. Create two ArrayLists. One stores the keys and one stores the values. The indexes will be the same for each key value pair.
+		b. Check if key exists in the keys array when we do put. If not, add it to both the key and value array.
+		c. If it does exist, then just update the value at the index of the key.
+		d. To get the value of the key, find where the key index is, then just put the index value into the values array to get the value.
+		e. To remove, find the key index to remove the value at that index. Then remove the key in key array.
+		f. Runtime: 138 ms, faster than 6.81% of Java online submissions forDesign HashMap.
+		g. Memory Usage: 54.4 MB, less than 46.37% of Java online submissions for Design HashMap.
+	11. Design a HashSet without using any built-in hash table libraries. To be specific, your design should include these functions:
+		a. Add(value): insert a value into the HashSet
+		b. Contains(value): return whether the value exists in the hashset or not
+		c. Remove(value): remove a value in the hashset. If the value does not exist in the HashSet, do nothing.
+		d. Create an ArrayList.
+		e. Add the key into the array list, after checking if it already exist
+		f. Remove the key from the array list by using the arraylist remove method
+		g. Return boolean of contains method using array list contains method.
